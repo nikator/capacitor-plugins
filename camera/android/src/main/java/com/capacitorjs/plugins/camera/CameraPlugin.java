@@ -285,7 +285,7 @@ public class CameraPlugin extends Plugin {
 
     private void openPhotos(final PluginCall call, boolean multiple, boolean skipPermission) {
         if (skipPermission || checkPhotosPermissions(call)) {
-            Intent intent = new Intent(Intent.ACTION_PICK);
+            Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
             intent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, multiple);
             intent.setType("image/*");
             try {
